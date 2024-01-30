@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const timeout = parseInt(process.env.TIMEOUT ?? "30000");
+const port = parseInt(process.env.PORT ?? "9001");
 
 const app = express();
 
@@ -26,4 +27,4 @@ app.get('/metrics', (req, res) => {
     res.end(`status ${status ? 1 : 0}\n`);
 });
 
-app.listen(9001);
+app.listen(port);

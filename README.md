@@ -9,3 +9,4 @@ Simple exporter for NodeRED
 
 `.env` variables:
 - `TIMEOUT` - timeout after which NodeRED will be considered dead
+- `PORT` - port to listen onto

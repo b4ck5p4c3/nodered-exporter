@@ -1,5 +1,7 @@
 FROM node:20-alpine
+WORKDIR /app
 COPY package*.json package*.json
 RUN yarn --pure-lockfile
 COPY . .
-CMD "yarn main"
+EXPOSE 9001
+CMD yarn main
