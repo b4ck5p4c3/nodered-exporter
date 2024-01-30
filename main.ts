@@ -11,7 +11,7 @@ const app = express();
 let status = false;
 let lastCallback: NodeJS.Timeout | undefined = undefined;
 
-app.get('/nodered-ping', (req, res) => {
+app.post('/nodered-ping', (req, res) => {
     status = true;
     if (lastCallback) {
         clearTimeout(lastCallback);

@@ -2,9 +2,9 @@
 
 Simple exporter for NodeRED
 
-`/metrics` - return NodeRED status
+`GET /metrics` - return NodeRED status
 
-`/nodered-ping` - send this request from NodeRED each `TIMEOUT` / 2 milliseconds
+`POST /nodered-ping` - send this request from NodeRED each `TIMEOUT` / 2 milliseconds
 
 
 `.env` variables:
