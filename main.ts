@@ -24,7 +24,7 @@ app.post('/nodered-ping', (req, res) => {
 });
 
 app.get('/metrics', (req, res) => {
-    res.end(`status ${status ? 1 : 0}\n`);
+    res.end(`#HELP nodered_status NodeRED status (1 - ok, 0 - failed)\n#TYPE nodered_status gauge\nnodered_status ${status ? 1 : 0}\n`);
 });
 
 app.listen(port);
