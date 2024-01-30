@@ -17,7 +17,7 @@ app.post('/nodered-ping', (req, res) => {
         clearTimeout(lastCallback);
         lastCallback = undefined;
     }
-    setTimeout(() => {
+    lastCallback = setTimeout(() => {
         status = false;
     }, timeout);
     res.end('ok');
